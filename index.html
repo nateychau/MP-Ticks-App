@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Climbing Log</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- mychart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<!-- jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.js"
+  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class = "container">
+    <div class = "row align-items-center">
+      <span class = "border rounded">
+      <div class = "col py-2">
+    <form id="userForm" onsubmit= "event.preventDefault(); updateUserInfo();">
+        <label for = "userKey">Mountain Project API Key:</label>
+        <input type="text" id="userKey" name="userKey">
+        <br>
+        <label for = "userEmail">Mountain Project Email Account:</label>
+        <input type="text" id="userEmail" name="userEmail">
+        <br>
+        <input type = "checkbox" id = "saveInfo" name="saveInfo">
+        <label for="saveInfo">Remember me (All data is stored locally on your device)</label>
+        <br>
+        <input type = "submit" value = "Submit">
+    </form>
+    <p id = "submitMessage" style="color:red;"></p>
+  </div>
+</span>
+  <div class = "col">
+    <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
+  </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+
+
+</html>
