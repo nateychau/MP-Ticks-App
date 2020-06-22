@@ -17,6 +17,17 @@
 <!--style.css-->
 <link rel="stylesheet" type="text/css" href="style.css">
 
+<!-- jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.js"
+  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+  crossorigin="anonymous"></script>
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
 </head>
 <body>
   <div class = "container">
@@ -24,16 +35,21 @@
       <span class = "border rounded">
       <div class = "col py-2">
     <form id="userForm" onsubmit= "event.preventDefault(); updateUserInfo();">
+      <div class ="form-group">
         <label for = "userEmail">Mountain Project Email Account:</label>
-        <input type="text" id="userEmail" name="userEmail">
-        <br>
-        <label for = "userKey" >Mountain Project API Key:</label>
-        <input type="text" id="userKey" name="userKey">
-        <br>
-        <input type = "checkbox" id = "saveInfo" name="saveInfo">
+        <input type="text" class="form-control" id="userEmail" name="userEmail">
+      </div>
+      <div class ="form-group">
+        <label for = "userKey">Mountain Project API Key:</label>
+        <input type="text" class="form-control" id="userKey" name="userKey">
+        <small id="emailHelp" class="form-text text-muted">You can find your API Key by logging into Mountain Project and going to the <a href="https://www.mountainproject.com/data" target="_blank">data page</a></small>
+      </div>
+      <div class="form-check">  
+        <input type = "checkbox" class="form-check-input" id = "saveInfo" name="saveInfo">
         <label for="saveInfo">Remember me (All data is stored locally on your device)</label>
         <br>
-        <input type = "submit" value = "Submit">
+      </div>
+        <button type = "submit" class="btn btn-primary">Submit</button>
     </form>
     <p id = "submitMessage" style="color:red;"></p>
   </div>
@@ -50,9 +66,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<!-- jquery -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.slim.js"
-  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-  crossorigin="anonymous"></script>
+
 </html>

@@ -161,22 +161,22 @@ fetch(url1)
                 //append route name and grade to user tick list json array
                 addRouteInfo(data2.routes, allTicks);
                 allTicks.sort(GetSortOrder("grade"));
-                console.log(allTicks)
+                //console.log(allTicks)
                 //create individual arrays from json array for chart data
                 allTicks.forEach(tick => {
-                    console.log(gradeCount)
-                    console.log(tick.name +" "+ tick.type +" " + tick.grade)
+                    //console.log(gradeCount)
+                    //console.log(tick.name +" "+ tick.type +" " + tick.grade)
                     if(tick.type == 'Boulder'){
                         var grade = tick.grade.replace(' PG13', '');
                         if(grade.includes('5.')){var idx = grade.indexOf('V'); grade = grade.slice(idx)}
                         if(grade.includes('-') && !grade.includes('easy')){grade = grade.slice(0,2)}
                         if (!gradeCount.hasOwnProperty(grade)){
                             gradeCount[grade] = 1;
-                            console.log("new grade")
+                            //console.log("new grade")
                         }
                         else{
                             gradeCount[grade] = gradeCount[grade]+=1;
-                            console.log("incrememnt existing grade")
+                            //console.log("incrememnt existing grade")
                         }
                     }
                     // tickDates.push(tick.date)
@@ -186,8 +186,8 @@ fetch(url1)
                     //     y: tick.grade
                     // })
                 });
-                console.log(Object.values(gradeCount))
-                console.log(Object.keys(gradeCount))
+                //console.log(Object.values(gradeCount))
+                //console.log(Object.keys(gradeCount))
                 //Initialize chart with user data
                 newChart(Object.values(gradeCount), Object.keys(gradeCount), ctx)
             }
