@@ -25,3 +25,15 @@
   visibility: visible;
   opacity: 1;
 }
+
+th {
+  margin-bottom: 15px;
+}
+
+th.pointer {
+  cursor: pointer;
+}
+      
+th:hover {
+  background-color: #ccc;
+}

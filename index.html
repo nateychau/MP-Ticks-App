@@ -22,16 +22,17 @@
   src="https://code.jquery.com/jquery-3.5.1.slim.js"
   integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
   crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
 <script>
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+  //var moment = require('moment');
+  moment().format();
 </script>
 
 </head>
 <body>
   <div class = "container">
-    <div class = "row align-items-center">
+    <div class = "row align-items-center py-2 mt-3 mb-5">
+      <div class="col"></div>
       <span class = "border rounded">
       <div class = "col py-2">
     <form id="userForm" onsubmit= "event.preventDefault(); updateUserInfo();">
@@ -54,9 +55,36 @@
     <p id = "submitMessage" style="color:red;"></p>
   </div>
 </span>
-  <div class = "col">
-    <canvas id="myChart" width="400" height="400"></canvas>
+<div class="col"></div>
   </div>
+</div>
+  <div class="container">
+  <div class ="row align-items-center">
+    <div class = "col">
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    <div class="col">
+      <canvas id="myChart2" width="400" height="400"></canvas>
+    </div>
+  </div>
+</div>
+  <br>
+  <br>
+<div class="container">
+  <div class="row align-items-center">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th id ="dateCol" scope="col" onclick="dateOrder = sortTable(ticktable, 0, dateOrder)">Date</th>
+          <th id ="gradeCol" scope="col" onclick="gradeOrder = sortTable(ticktable, 1, gradeOrder)">Grade</th>
+          <th id ="nameCol" scope="col" onclick="nameOrder = sortTable(ticktable, 2, nameOrder)">Name</th>
+          <th id ="areaCol" scope="col" onclick="areaOrder = sortTable(ticktable, 3, areaOrder)">Area</th>
+        </tr>
+      </thead>
+      <tbody id="ticktable" >
+
+      </tbody>
+    </table>
   </div>
   </div>
 </body>
