@@ -38,6 +38,7 @@ var callback = function(){
     }
     else{
         newChart(defaultCount, defaultGrades, ctx);
+        newLine([], [], ctx2)
     }
   };
   
@@ -69,6 +70,7 @@ var ticktable = document.getElementById('ticktable');
 //Function for form submit behavior
 function updateUserInfo(){
     newChart(defaultCount, defaultGrades, ctx);
+    newLine([], [], ctx2)
     resetTable(ticktable);
     ticktable = document.getElementById('ticktable');
     var userKey = document.getElementById('userKey').value;
