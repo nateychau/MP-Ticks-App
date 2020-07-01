@@ -206,7 +206,7 @@ function fetchMPData(url1){
                     yAxes: [{
                         id: 'Grade',
                         type: 'category',
-                        labels: ['V7', 'V6', 'V5', 'V4', 'V3', 'V2', 'V1', 'V0'],
+                        labels: ['V10', 'V9', 'V8', 'V7', 'V6', 'V5', 'V4', 'V3', 'V2', 'V1', 'V0'],
                     }]
                     
                 }
