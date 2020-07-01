@@ -27,17 +27,13 @@
 
 </head>
 <body>
-
   <!-- <div id ='loginBox'></div> -->
   <div class = "container">
-    <div class = "row py-2 mt-3">
-        <img class="mx-auto d-block" src="LogoMakr_9HO86M.png">
-    </div>
     <div class = "row align-items-center py-2 mt-3 mb-5">
       <div class="col"></div>
       <span id="login" class = "border rounded">
       <div class = "col py-2">
-    <form id="userForm" onsubmit= "event.preventDefault(); loginCheck();">
+    <form id="userForm" onsubmit= "event.preventDefault(); updateUserInfo();">
       <div class ="form-group">
         <label for = "userEmail">Mountain Project Email Account:</label>
         <input type="text" class="form-control" id="userEmail" name="userEmail">
@@ -60,15 +56,38 @@
 <div class="col"></div>
   </div>
 </div>
-  
+  <div class="container">
+  <div class ="row align-items-center">
+    <div class = "col">
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    <div class="col">
+      <canvas id="myChart2" width="400" height="400"></canvas>
+    </div>
+  </div>
+</div>
+  <br>
+  <br>
+<div class="container">
+  <div class="row align-items-center">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th id ="dateCol" scope="col" onclick="dateOrder = sortTable(ticktable, 0, dateOrder)">Date</th>
+          <th id ="gradeCol" scope="col" onclick="gradeOrder = sortTable(ticktable, 1, gradeOrder)">Grade</th>
+          <th id ="nameCol" scope="col" onclick="nameOrder = sortTable(ticktable, 2, nameOrder)">Name</th>
+          <th id ="areaCol" scope="col" onclick="areaOrder = sortTable(ticktable, 3, areaOrder)">Area</th>
+        </tr>
+      </thead>
+      <tbody id="ticktable" >
+
+      </tbody>
+    </table>
+  </div>
+  </div>
 </body>
 
-<footer class="float-right">
-    <p>Logo created at <a href="https://logomakr.com/">LogoMakr.com</a></p>
-</footer>
-
-<!-- <script src="script.js"></script> -->
-<script src="login.js"></script>
+<script src="script.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

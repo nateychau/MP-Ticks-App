@@ -37,3 +37,23 @@ th.pointer {
 th:hover {
   background-color: #ccc;
 }
+
+body {background-color:  #2d5986;
+}
+
+#login{
+  background-color: #fff2e6;
+
+}
+
+canvas{
+  background-color:  #fff2e6;
+}
+
+table{
+  background-color:  #fff2e6;
+}
+
+.card{
+  background-color: #fff2e6;
+}

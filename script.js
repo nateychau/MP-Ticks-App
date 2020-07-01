@@ -37,8 +37,8 @@ var callback = function(){
         fetchMPData(ticksURL);
     }
     else{
-        newChart(defaultCount, defaultGrades, ctx);
-        newLine([], [], ctx2)
+         newChart(defaultCount, defaultGrades, ctx);
+         newLine([], [], ctx2)
     }
   };
   
@@ -81,6 +81,10 @@ function updateUserInfo(){
         return false
     }
     else{
+        newChart(defaultCount, defaultGrades, ctx);
+        newLine([], [], ctx2)
+        resetTable(ticktable);
+        ticktable = document.getElementById('ticktable');
         redPoints = [];
         redPointDates = [];
         redPointGrades = [];
@@ -258,8 +262,8 @@ function newLine(dates, grades, chart){
             labels: dates,
             datasets: [{
                 label: 'Redpoint Grade',
-                backgroundColor: '#36a2eb',
-                borderColor: '#36a2eb',
+                backgroundColor: 'red',
+                borderColor: 'red',
                 //xAxisID: 'Date',
                 yAxisID: 'Grade',
                 data: grades,
@@ -376,4 +380,9 @@ function sortTable(table, column, order){
         return "ascending"
     }
     else return "descending"
+}
+
+
+function logOut(){
+    document.location.href = "index.html";
 }
